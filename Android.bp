@@ -42,7 +42,6 @@ license {
 
 rust_library {
     name: "libregex_automata",
-    // has rustc warnings
     host_supported: true,
     crate_name: "regex_automata",
     srcs: ["src/lib.rs"],
@@ -57,11 +56,9 @@ rust_library {
         "-C opt-level=3",
     ],
     rustlibs: [
-        "libbyteorder",
         "libregex_syntax",
     ],
 }
 
 // dependent_library ["feature_list"]
-//   byteorder-1.4.2
-//   regex-syntax-0.6.22 "default,unicode,unicode-age,unicode-bool,unicode-case,unicode-gencat,unicode-perl,unicode-script,unicode-segment"
+//   regex-syntax-0.6.25 "default,unicode,unicode-age,unicode-bool,unicode-case,unicode-gencat,unicode-perl,unicode-script,unicode-segment"
