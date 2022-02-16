@@ -290,6 +290,7 @@ extern crate core;
 
 #[cfg(all(test, feature = "transducer"))]
 extern crate bstr;
+extern crate byteorder;
 #[cfg(feature = "transducer")]
 extern crate fst;
 #[cfg(feature = "std")]
@@ -305,7 +306,6 @@ pub use regex::RegexBuilder;
 pub use sparse::SparseDFA;
 pub use state_id::StateID;
 
-mod byteorder;
 mod classes;
 #[path = "dense.rs"]
 mod dense_imp;
