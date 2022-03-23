@@ -148,8 +148,7 @@ impl<'a, S: StateID> Determinizer<'a, S> {
         if let Some(&cached_id) = self.cache.get(&state) {
             // Since we have a cached state, put the constructed state's
             // memory back into our scratch space, so that it can be reused.
-            let _ =
-                mem::replace(&mut self.scratch_nfa_states, state.nfa_states);
+            mem::replace(&mut self.scratch_nfa_states, state.nfa_states);
             return Ok((cached_id, false));
         }
         // Nothing was in the cache, so add this state to the cache.
